@@ -1,11 +1,12 @@
 {% extends 'video_collection/base.html' %}
 
-{* block content %}
+{% block content %}
 
 
 <form method="POST" action="(% url 'add_video' %)">
     {% csrf_token %}
     {{ new_video_form }}
+    <button type="="submit">Add video</button>
 
 
 </form>

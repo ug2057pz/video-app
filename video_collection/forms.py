@@ -1,6 +1,13 @@
-from django import forms
-from .models import Video
+from django import forms 
+from .models import Video 
+
 
 class VideoForm(forms.ModelForm):
     class Meta:
-        model = Videofields = ['name', 'url', 'notes']
+        model = Video 
+        fields = ['name', 'url', 'notes']
+
+
+
+class SearchForm(forms.Form):
+    search_term = forms.CharField()
